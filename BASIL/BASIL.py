@@ -67,22 +67,22 @@ class BASIL:
         current_index = sorted_lines.index(current)
         return sorted_lines[current_index + 1] if current_index + 1 < len(sorted_lines) else None
 
-    def input_statement(self, parts):
-        prompt = parts[1][1:-1]  # Remove surrounding quotes
-        variable_name = parts[2]
-
-        # Display the prompt and take user input
-        user_input = input(f"{prompt}: ")
-        try:
-            # Attempt to convert to integer or float if possible
-            if '.' in user_input:
-                value = float(user_input)
-            else:
-                value = int(user_input)
-        except ValueError:
-            value = user_input  # Treat as a string if conversion fails
-
-        self.variables[variable_name] = value
+    #def input_statement(self, parts):
+    #    prompt = parts[1][1:-1]  # Remove surrounding quotes
+    #    variable_name = parts[2]
+    #
+    #    # Display the prompt and take user input
+    #    user_input = input(f"{prompt}: ")
+    #    try:
+    #        # Attempt to convert to integer or float if possible
+    #        if '.' in user_input:
+    #            value = float(user_input)
+    #        else:
+    #            value = int(user_input)
+    #    except ValueError:
+    #        value = user_input  # Treat as a string if conversion fails
+    #
+    #    self.variables[variable_name] = value
 
     def remove_line(self, line_number):
         """Remove the specified code line."""
